@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:   
-  annotations:  
+metadata:
+  annotations:
     tad.gitops.set/image: ".spec.template.spec.containers[0].image"
     tad.gitops.get/image: ".spec.template.spec.containers[0].image"
     tad.gitops.set/replicas: ".spec.replicas"
-    tad.gitops.get/replicas: ".spec.replicas" 
+    tad.gitops.get/replicas: ".spec.replicas"
   name: go-ucylhmzd
 spec:
-  replicas: 1 
-  template: 
+  replicas: 1
+  template:
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/rhtap-task-runner:latest
-        name: container-image  
+        - image: tssc-quay-quay-tssc-quay.apps.cluster-fhj8w.fhj8w.sandbox2412.opentlc.com/tssc/go-ucylhmzd:5af1e89c4ae71b8740eae812a066af2cd8e96918@sha256:77202d514e9ee5af257c684657e8d37a088516defc4eb64540d88f7561255464
+          name: container-image
